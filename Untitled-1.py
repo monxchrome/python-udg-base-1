@@ -25,7 +25,15 @@
 
 # f string (magic string)
 
-def fstr(a, b):
-    print(f"Hello my name is {a} I'm {b} years old")
+# def fstr(a, b):
+#     print(f"Hello my name is {a} I'm {b} years old")
 
-fstr("Stefan", 18)
+# fstr("Stefan", 18)
+
+# replace
+
+# def test():
+#     d = "monday, tuesday"
+#     print(d.replace("monday", "wednesday"))
+
+# test()
