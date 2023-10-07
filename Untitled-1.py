@@ -329,8 +329,58 @@ print(Fore.GREEN + "TASK 3 PASSED!")
 
 # TASK 4
 
-# def task4(a, b):
+def task4(x, y, width, height):
+    return x == 0 or x == width or y == 0 or y == height
 
-print(Fore.YELLOW + "TASK 4 ?")
+table_width = 10
+table_height = 5
+
+ant_x = 4
+ant_y = 5
+
+if task4(ant_x, ant_y, table_width, table_height):
+    print("Ant is moving")
+else:
+    print("Ant is staying")
+
+print(Fore.GREEN + "TASK 3 PASSED!")
 
 # TASK 5
+
+def task5(month):
+    months = {
+        "january": 1,
+        "february": 2,
+        "march": 3,
+        "april": 4,
+        "may": 5,
+        "june": 6,
+        "july": 7,
+        "august": 8,
+        "september": 9,
+        "october": 10,
+        "november": 11,
+        "december": 12
+    }
+    
+    if month in months:
+        print(months[month])
+    else:
+        print("Enter a valid month")
+
+task5("january")
+
+print(Fore.GREEN + "TASK 3 PASSED!")
+
+# TASK 6
+
+def task6(text, max_length):
+    if len(text) > max_length:
+        shortered_text = text[:max_length]
+        return shortered_text + "..."
+    else:
+        return text
+    
+input = "rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed"
+    
+print(task6(input, 30))
