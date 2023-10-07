@@ -1,280 +1,6 @@
-import random
 from colorama import init, Fore
 
 init(autoreset=True)
-
-####################################
-
-# string
-
-
-# def test(a, b):                 
-#     print(f"{a} {b}")
-
-# test(input(), input())
-
-####################################
-
-# str operators
-
-
-# a = "hello world &"                 
-
-# print(
-#     a.upper(), 
-#     a.lower(),
-#     a.strip("&"), 
-#     a.split(","),
-#     a.split(),
-#     a.find("w"), 
-#     a.startswith("o"), 
-#     a.startswith("h"),
-#     a.endswith("a"), 
-#     a.endswith("d"),
-#     sep="\n"
-#     )
-
-####################################
-
-# f string (magic string)
-
-# def fstr(a, b):
-#     print(f"Hello my name is {a} I'm {b} years old")
-
-# fstr("Stefan", 18)
-
-####################################
-
-# replace
-
-
-# def test():
-#     d = "monday, tuesday"
-#     print(d.replace("monday", "wednesday"))
-
-# test()
-
-
-####################################
-
-# endswith / startswith
-
-
-# def test(a):
-#     print(a.endswith(".com"))
-#     print(a.startswith("a"))
-
-# test("a@gmail.com")
-
-####################################
-
-# count
-
-# def test(a):
-#     print(a.count("hello"))
-
-# test("hello world")
-
-# is digit
-
-# def test(a):
-#     print(a.isdigit())
-
-# test(input("enter number or str"))
-
-####################################
-
-# logical operators + colorama
-
-
-# def function(godine):
-#     print(Fore.BLUE + str(godine))
-#     if godine >= 18:
-#         print(Fore.GREEN + "Punljetni ste")
-#     else:
-#         print(Fore.RED + "Ne punljetni ste")
-
-# function(random.randint(1, 21))
-
-
-# def function(a):
-#     if a.lower() == "subota" or a.lower == "nedelja":
-#         print("Weekend")
-#     else:
-#         print("pizdec")
-
-# function("Subota")
-
-# def function(a):
-#     print(Fore.MAGENTA + str(a))
-#     if a >= 91:
-#         print(Fore.LIGHTCYAN_EX + "a")
-#     elif a >= 81:
-#         print(Fore.LIGHTCYAN_EX + 'b')
-#     elif a >= 71:
-#         print(Fore.LIGHTCYAN_EX + 'c')
-#     else:
-#         print(Fore.LIGHTCYAN_EX + 'd')
-
-# function(random.randint(60, 100))
-
-# def function(temperature, period):
-#     if temperature >= 25 and period == "jutro":
-#         print(Fore.CYAN + "Jutro 25 stepeni")
-#     elif temperature >= 25:
-#         print(Fore.CYAN + "Nije jutro ali je 25 stepeni")
-#     else:
-#         print(Fore.CYAN + "Nije 25 stepeni")
-
-# function(22, "jutro")
-
-# def function(a):
-#     if a % 2 == 0:
-#         print(f"Broj {a} je paren")
-#     else:
-#         print(f"Broj {a} je ne paren")
-
-# function(int(input()), int(input()))
-
-# def function(a):
-#     print(f"ima recenica {Fore.LIGHTCYAN_EX + a}") if a in "hello world" else print(f"nema recenica {a}") # тернарка ( if "a" in "text" )
-
-# function("hello")
-
-####################################
-
-# cycles
-
-
-# for i in range(0, 11):
-#     print(i)
-
-num = 0
-
-# while num < 11:
-#     print(num)
-#     num += 1
-
-# while num < 11:
-#     print(num);
-#     num += 1
-#     if num == 5:
-#         break;
-
-# while num < 11:
-#     print(num);
-#     num += 1
-#     if num == 5:
-#         continue;
-
-# def function(a):
-#     while a < 6:
-#         print(a)
-#         a += 1
-
-#     for i in range(6):
-#         if(i == 5):
-#             print(i)
-#         else:
-#             print("Stefan Samokhval")
-
-# function(0)
-
-# arr = []
-
-# def function(a):
-#     for i in a:
-#         print(i)
-#         arr.extend(i)
-
-# function("Python")
-# print(arr)
-
-
-# def function(a):
-#     for i in a:
-#         if i == "t":
-#             print(i)
-#             break;
-
-# function("Python")
-
-# def function():
-#     for i in range(0, 10):
-#         print(i)
-#         if i == 6:
-#             break;
-
-# function()
-
-# def function(a):
-#     b = a.split(" ")
-#     print(Fore.RED + str((len(b[0]) + len(b[1]))*2 ))
-#     print(Fore.RED + str(len(b[0]) * len(b[1])))
-
-
-# function("Artifical Intelligence")
-
-# for i in range(1,5):
-#     for j in range(6,10):
-#         print(i, j)
-
-# def function(a, b, c):
-#     for i in a:
-#         for j in b:
-#             for k in c:
-#                 print(a, b, c)
-
-# function("Hello", "World", "Pizdec")
-
-# for i in range(5):
-#     for j in range(5, 10):
-#         for k in range(10, 15):
-#             print(i*j*k)
-
-####################################
-
-# Practice
-
-# array (list)
-
-# kvadrati = [x**2 for x in range(5)]
-# print(kvadrati)
-
-# arr = []
-# arr2 = []
-
-# def function(start, end):
-#     for i in range(start, end+1):
-#         arr.append(i)
-    
-#     for index in arr: 
-#         if index % 2 == 0:
-#             if index % 5 != 0:
-#                 arr2.append(index**2)
-#                 print(Fore.RED + str(sum(arr2)))
-
-
-# function(int(input()), int(input()))
-
-# def function(a):
-#     print(sum(map(int,str(a))))
-    
-
-# function(int(input()))
-
-# def function(a):
-#     b = 0
-
-#     for i in a:
-#         if i == "e" or i == "E":
-#             b += 1
-    
-#     print(b)
-
-# function("Heeeello")
-
-####################################
 
 # TASK 1
 
@@ -343,7 +69,7 @@ if task4(ant_x, ant_y, table_width, table_height):
 else:
     print("Ant is staying")
 
-print(Fore.GREEN + "TASK 3 PASSED!")
+print(Fore.GREEN + "TASK 4 PASSED!")
 
 # TASK 5
 
@@ -370,7 +96,7 @@ def task5(month):
 
 task5("january")
 
-print(Fore.GREEN + "TASK 3 PASSED!")
+print(Fore.GREEN + "TASK 5 PASSED!")
 
 # TASK 6
 
@@ -381,6 +107,55 @@ def task6(text, max_length):
     else:
         return text
     
-input = "rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed"
+a_input = "rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed"
     
-print(task6(input, 30))
+print(task6(a_input, 30))
+
+print(Fore.GREEN + "TASK 6 PASSED!")
+
+# TASK 7
+
+def task7(bin):
+    if bin.startswith("0b"):
+        return "Binary"
+    elif bin.startswith("0o"):
+        return "Oktanly"
+    elif bin.startswith("0x"):
+        return "Dekadny"
+    else:
+        try:
+            int(bin)
+            return "Hex"
+        except ValueError:
+            return "undefined"
+        
+task7("0x")
+
+print(Fore.GREEN + "TASK 7 PASSED!")
+
+# TASK 8
+
+def task8(text, new_text):
+    stre = text[1:-1]
+    print(stre)
+    print(new_text)
+
+task8("asdqwe", "ytyt")
+
+print(Fore.GREEN + "TASK 8 PASSED!")
+
+def task9(text):
+    vow = "AEIOUaeiou"
+
+    for char in text:
+        if char in vow:
+            return True
+        else: False
+
+task9_input = "Www!"
+
+if task9(task9_input):
+    print(True)
+else: print(False)
+
+print(Fore.GREEN + "TASK 9 PASSED!")
