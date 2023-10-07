@@ -188,10 +188,18 @@ arr = []
 
 # function("Python")
 
-def function():
-    for i in range(0, 10):
-        print(i)
-        if i == 6:
-            break;
+# def function():
+#     for i in range(0, 10):
+#         print(i)
+#         if i == 6:
+#             break;
 
-function()
+# function()
+
+def function(a):
+    b = a.split(" ")
+    print(Fore.RED + str((len(b[0]) + len(b[1]))*2 ))
+    print(Fore.RED + str(len(b[0]) * len(b[1])))
+
+
+function("Artifical Intelligence")
