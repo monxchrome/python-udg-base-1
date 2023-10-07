@@ -46,3 +46,17 @@
 
 # test("a@gmail.com")
 
+# count
+
+# def test(a):
+#     print(a.count("hello"))
+
+# test("hello world")
+
+# is digit
+
+# def test(a):
+#     print(a.isdigit())
+
+# test(input("enter number or str"))
+
