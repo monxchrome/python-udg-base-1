@@ -232,7 +232,9 @@ num = 0
 #         for k in range(10, 15):
 #             print(i*j*k)
 
-##################
+####################################
+
+# Practice
 
 # array (list)
 
@@ -261,13 +263,74 @@ num = 0
 
 # function(int(input()))
 
-def function(a):
-    b = 0
+# def function(a):
+#     b = 0
 
-    for i in a:
-        if i == "e" or i == "E":
-            b += 1
+#     for i in a:
+#         if i == "e" or i == "E":
+#             b += 1
     
-    print(b)
+#     print(b)
 
-function("Heeeello")
+# function("Heeeello")
+
+####################################
+
+# TASK 1
+
+from math import sqrt
+
+def task1(a, b, c):
+
+    x1 = 0
+    x2 = 0
+    
+    D = b**2 - 4*a*c
+
+    if D < 0:
+        print("Main domain error")
+    else:
+        x1 = (-b + sqrt(D))/2*a
+        x2 = (-b - sqrt(D))/2*a
+
+    if x1 == 0 or x2 == 0:
+        print("Main domain error")
+    else:
+        print(x1, x2)
+
+task1(-1, 7, -10)
+
+print(Fore.GREEN + "TASK 1 PASSED!")
+
+# TASK 2
+
+def task2(a, b,c):
+    print(a**2 + b**2 + c**2 + 2*a*b + 2*a*c + 2*b*c)
+
+task2(4,5,6)
+
+print(Fore.GREEN + "TASK 2 PASSED!")
+
+# TASK 3
+
+def task3(a):
+    if a >= 4.5:
+        print("GOAT")
+    elif a > 3.5 and a < 4.5:
+        print("Good")
+    elif a >= 2 and a <= 3.5:
+        print("Poor")
+    else:
+        print("Bad")
+
+task3(4)
+
+print(Fore.GREEN + "TASK 3 PASSED!")
+
+# TASK 4
+
+# def task4(a, b):
+
+print(Fore.YELLOW + "TASK 4 ?")
+
+# TASK 5
