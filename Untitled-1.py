@@ -3,6 +3,7 @@ from colorama import init, Fore
 
 init(autoreset=True)
 
+####################################
 
 # string
 
@@ -12,6 +13,7 @@ init(autoreset=True)
 
 # test(input(), input())
 
+####################################
 
 # str operators
 
@@ -32,6 +34,8 @@ init(autoreset=True)
 #     sep="\n"
 #     )
 
+####################################
+
 # f string (magic string)
 
 # def fstr(a, b):
@@ -39,6 +43,7 @@ init(autoreset=True)
 
 # fstr("Stefan", 18)
 
+####################################
 
 # replace
 
@@ -50,6 +55,8 @@ init(autoreset=True)
 # test()
 
 
+####################################
+
 # endswith / startswith
 
 
@@ -58,6 +65,8 @@ init(autoreset=True)
 #     print(a.startswith("a"))
 
 # test("a@gmail.com")
+
+####################################
 
 # count
 
@@ -73,6 +82,7 @@ init(autoreset=True)
 
 # test(input("enter number or str"))
 
+####################################
 
 # logical operators + colorama
 
@@ -131,6 +141,7 @@ init(autoreset=True)
 
 # function("hello")
 
+####################################
 
 # cycles
 
@@ -169,7 +180,7 @@ num = 0
 
 # function(0)
 
-arr = []
+# arr = []
 
 # def function(a):
 #     for i in a:
@@ -196,10 +207,67 @@ arr = []
 
 # function()
 
+# def function(a):
+#     b = a.split(" ")
+#     print(Fore.RED + str((len(b[0]) + len(b[1]))*2 ))
+#     print(Fore.RED + str(len(b[0]) * len(b[1])))
+
+
+# function("Artifical Intelligence")
+
+# for i in range(1,5):
+#     for j in range(6,10):
+#         print(i, j)
+
+# def function(a, b, c):
+#     for i in a:
+#         for j in b:
+#             for k in c:
+#                 print(a, b, c)
+
+# function("Hello", "World", "Pizdec")
+
+# for i in range(5):
+#     for j in range(5, 10):
+#         for k in range(10, 15):
+#             print(i*j*k)
+
+##################
+
+# array (list)
+
+# kvadrati = [x**2 for x in range(5)]
+# print(kvadrati)
+
+# arr = []
+# arr2 = []
+
+# def function(start, end):
+#     for i in range(start, end+1):
+#         arr.append(i)
+    
+#     for index in arr: 
+#         if index % 2 == 0:
+#             if index % 5 != 0:
+#                 arr2.append(index**2)
+#                 print(Fore.RED + str(sum(arr2)))
+
+
+# function(int(input()), int(input()))
+
+# def function(a):
+#     print(sum(map(int,str(a))))
+    
+
+# function(int(input()))
+
 def function(a):
-    b = a.split(" ")
-    print(Fore.RED + str((len(b[0]) + len(b[1]))*2 ))
-    print(Fore.RED + str(len(b[0]) * len(b[1])))
+    b = 0
 
+    for i in a:
+        if i == "e" or i == "E":
+            b += 1
+    
+    print(b)
 
-function("Artifical Intelligence")
+function("Heeeello")
