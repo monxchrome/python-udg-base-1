@@ -37,3 +37,12 @@
 #     print(d.replace("monday", "wednesday"))
 
 # test()
+
+# endswith / startswith
+
+# def test(a):
+#     print(a.endswith(".com"))
+#     print(a.startswith("a"))
+
+# test("a@gmail.com")
+
