@@ -1,358 +1,127 @@
-from colorama import init, Fore
-import time
+# arr = [1, "asd", True, [1, 5]]
 
-init(autoreset=True)
+# print(len(arr)) # length of array
+# print(arr[1]) # index 1 of array
+# print(arr[1:3]) # from index 1 to 3
 
-# TASK 1
+# arr2 = [5,3]
+# print(arr+arr2) # array 1 + array 2 in the end
+# print(arr2*2) # array 2 p. 2
 
-from math import sqrt
+# arr.append("test") # add test in the end
+# print(arr)
 
-def task1(a, b, c):
+# arr.pop() # delete test
+# arr.pop(1) # delete index 1
+# print(arr)
 
-    x1 = 0
-    x2 = 0
+# arr.reverse() # reversing array
+# print(arr)
+
+# arr3 = [5,1,3,4,5,6]
+# arr3.sort() # sorting 
+# print(arr3)
+# print(arr3.count(5)) # count numbers 5
+
+# arr4 = ["hello", "world", 5]
+# arr3.extend(arr4) # arr3 extends arr4
+# print(arr3)
+
+# arr4.insert(2, 5, ) # insert element 5 twice
+# print(arr4)
+
+# arr4.remove(5) # remove element 5
+# print(arr4) 
+
+# arr4.clear # clears all elements in arr4
+# print(arr4)
+
+# array = [1,2,4]
+# array2 = array
+# array2[1] = 9
+# print(array2)
+# print(array)
+
+# array3 = [2,5,2]
+# array4 = list(array3)
+# array4[1] = 9
+# print(array3)
+# print(array4)
+
+# zadataki
+
+# def z1():
+#     i = 0
+#     arr = [1,2,3,4,5,6,7,8,9,10]
+#     arr2 = []
+#     arr3 = []
+
+#     while i < len(arr):
+#         if arr[i] % 2 == 0:
+#             arr2.append(arr[i])
+#             arr.pop(i)
+#         else:
+#             arr3.append(arr[i])
+#             arr.pop(i)
+#     return arr, arr2, arr3
+
+# print(z1())
+
+# def z2():
+#     products = []
+
+#     while True:
+#         input_user = input()
+#         if input_user == "exit":
+#             break
+#         products.append(input_user)
     
-    D = b**2 - 4*a*c
+#     return products
 
-    if D < 0:
-        print("Main domain error")
-    else:
-        x1 = (-b + sqrt(D))/2*a
-        x2 = (-b - sqrt(D))/2*a
+# print(z2())
 
-    if x1 == 0 or x2 == 0:
-        print("Main domain error")
-    else:
-        print(x1, x2)
+# set
 
-task1(-1, 7, -10)
+# obj = {
+#     "name": "Stefan",
+#     "surname": "Samokhval",
+#     "age": 18,
+#     "is_studying": True
+# }
 
-print(Fore.GREEN + "TASK 1 PASSED!")
+# print(obj)
 
-time.sleep(3)
+# name=obj["name"] # vityanut obj
 
-# TASK 2
+# print(name)
 
-def task2(a, b,c):
-    print(a**2 + b**2 + c**2 + 2*a*b + 2*a*c + 2*b*c)
+# obj["name"] = "Hello" # update obj
 
-task2(4,5,6)
+# print(obj)
 
-print(Fore.GREEN + "TASK 2 PASSED!")
+# obj["is_work"] = True # add obj
 
-time.sleep(3)
+# print(obj)
 
-# TASK 3
+# def za1(name, surname):
+#     obj = {}
 
-def task3(a):
-    if a >= 4.5:
-        print("GOAT")
-    elif a > 3.5 and a < 4.5:
-        print("Good")
-    elif a >= 2 and a <= 3.5:
-        print("Poor")
-    else:
-        print("Bad")
+#     obj["name"] = name
+#     obj["surname"] = surname
 
-task3(4)
+#     return obj
 
-print(Fore.GREEN + "TASK 3 PASSED!")
+# print(za1(input(), input()))
 
-time.sleep(3)
+# def za2(objects, balls):
+#     obj = {}
 
-# TASK 4
+#     while True:
+#         if objects != "exit":
+#             obj[objects] = balls
+#         else:
+#             break
 
-def task4(x, y, width, height):
-    return x == 0 or x == width or y == 0 or y == height
+#     return obj
 
-table_width = 10
-table_height = 5
-
-ant_x = 4
-ant_y = 5
-
-if task4(ant_x, ant_y, table_width, table_height):
-    print("Ant is moving")
-else:
-    print("Ant is staying")
-
-print(Fore.GREEN + "TASK 4 PASSED!")
-
-time.sleep(3)
-
-# TASK 5
-
-def task5(month):
-    months = {
-        "january": 1,
-        "february": 2,
-        "march": 3,
-        "april": 4,
-        "may": 5,
-        "june": 6,
-        "july": 7,
-        "august": 8,
-        "september": 9,
-        "october": 10,
-        "november": 11,
-        "december": 12
-    }
-    
-    if month in months:
-        print(months[month])
-    else:
-        print("Enter a valid month")
-
-task5("january")
-
-print(Fore.GREEN + "TASK 5 PASSED!")
-
-time.sleep(3)
-
-# TASK 6
-
-def task6(text, max_length):
-    if len(text) > max_length:
-        shortered_text = text[:max_length]
-        return shortered_text + "..."
-    else:
-        return text
-    
-a_input = "rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed"
-    
-print(task6(a_input, 30))
-
-print(Fore.GREEN + "TASK 6 PASSED!")
-
-time.sleep(3)
-
-# TASK 7
-
-def task7(bin):
-    if bin.startswith("0b"):
-        return "Binary"
-    elif bin.startswith("0o"):
-        return "Oktanly"
-    elif bin.startswith("0x"):
-        return "Dekadny"
-    else:
-        try:
-            int(bin)
-            return "Hex"
-        except ValueError:
-            return "undefined"
-        
-print(task7("0x"))
-
-print(Fore.GREEN + "TASK 7 PASSED!")
-
-time.sleep(3)
-
-# TASK 8
-
-def task8(text, new_text):
-    stre = text[1:-1]
-    print(stre)
-    print(new_text)
-
-task8("asdqwe", "ytyt")
-
-print(Fore.GREEN + "TASK 8 PASSED!")
-
-time.sleep(3)
-
-# TASK 9
-
-def task9(text):
-    vow = "AEIOUaeiou"
-
-    for char in text:
-        if char in vow:
-            return True
-        else: False
-
-task9_input = "Www!"
-
-if task9(task9_input):
-    print(True)
-else: print(False)
-
-print(Fore.GREEN + "TASK 9 PASSED!")
-
-time.sleep(3)
-
-# TASK 10
-
-def task10(text):
-    for i in text:
-        if i.isupper():
-            print(i)
-
-task10("asdQWeRqwRT")
-
-print(Fore.GREEN + "TASK 10 PASSED!")
-
-time.sleep(3)
-
-# TASK 11
-
-def task11(n):
-    arr_p = []
-    arr_n = []
-
-    for i in range(1, n):
-        if i % 2 == 0:
-            arr_p.append(i)
-        else:
-            arr_n.append(i)
-
-    return print(arr_n, arr_p, sep="\n")
-
-print(task11(20))
-
-print(Fore.GREEN + "TASK 11 PASSED!")
-
-time.sleep(3)
-
-# TASK 12
-
-import datetime
-
-def task12(start, end):
-    arr = []
-
-    for i in range(start, end):
-        if i % 3 == 0 and i % 6 != 0:
-            i**2
-            arr.append(i)
-
-    return sum(arr)
-
-print(task12(12, 20))
-
-print(Fore.GREEN + "TASK 12 PASSED!")
-
-time.sleep(3)
-
-# TASK 13
-
-def task13():
-    current_time = datetime.datetime.now().time()
-
-    quiet_hours = [
-        (datetime.time(0, 0), datetime.time(6, 0)),
-        (datetime.time(13, 0), datetime.time(17, 0)),
-        (datetime.time(22, 0), datetime.time(23, 59, 59))
-    ]
-
-    noise = True
-
-    for start, end in quiet_hours:
-        if start <= current_time <= end:
-            noise = False
-            break
-    
-    if noise:
-        print("You can work now")
-    else:
-        print("You can't work now")
-
-task13()
-
-print(Fore.GREEN + "TASK 13 PASSED!")
-
-time.sleep(3)
-
-# TASK 14
-
-def task14(text):
-    product = 1
-    for i in text:
-        if i.isdigit():
-            product *= int(i)
-        
-    return product
-
-print(task14("asdqwe123"))
-
-print(Fore.GREEN + "TASK 14 PASSED!")
-
-time.sleep(3)
-
-# TASK 15
-
-def bcrypt(s):
-    encrypted = ""
-
-    for i in s:
-        if i.isdigit():
-            digit = int(i)
-
-            if digit % 2 == 0:
-                encrypted += "0"
-            else:
-                encrypted += "1"
-    
-    return encrypted
-
-print(bcrypt("15023"))
-
-print(Fore.GREEN + "TASK 15 PASSED!")
-
-time.sleep(3)
-
-# TASK 16
-
-def task16(num):
-    digit_sum = 0
-
-    num_str = str(num)
-    len_digits = len(num_str)
-
-    for i in num_str:
-        value = int(i)
-        digit_sum += value ** len_digits
-
-    if num == digit_sum:
-        return True
-    else: 
-        return False
-    
-print(task16(153))
-    
-print(Fore.GREEN + "TASK 16 PASSED!")
-
-time.sleep(3)
-
-# TASK 17
-
-def task17(num):
-    num_str = str(num)
-
-    return int(num_str[0]) + int(num_str[-1])
-    
-print(task17(333))
-
-print(Fore.GREEN + "TASK 17 PASSED!")
-
-time.sleep(3)
-
-# TASK 18
-
-def task18(text, end):
-    if text.endswith(end):
-        return True
-    else:
-        return False
-
-print(task18("www.google.com", "me"))
-
-print(Fore.GREEN + "TASK 18 PASSED!")
-
-time.sleep(3)
-
-print(Fore.GREEN + "ALL TASKS IS DONE!")
-time.sleep(1)
-print(Fore.GREEN + "ALL TASKS IS DONE!")
-time.sleep(1)
-print(Fore.GREEN + "ALL TASKS IS DONE!")
+# print(za2(input(), input()))
