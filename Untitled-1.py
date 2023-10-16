@@ -1,127 +1,150 @@
-# arr = [1, "asd", True, [1, 5]]
+num1 = 10
+num2 = 0
+# print(num1/num2)
+# ZeroDivisionError
+# we put try except
+try:
+    print(num1/num2)
+except:
+    print("Error")
 
-# print(len(arr)) # length of array
-# print(arr[1]) # index 1 of array
-# print(arr[1:3]) # from index 1 to 3
+# try:
+       # Some Code.... 
 
-# arr2 = [5,3]
-# print(arr+arr2) # array 1 + array 2 in the end
-# print(arr2*2) # array 2 p. 2
+# except:
+       # optional block
+       # Handling of exception (if required)
 
-# arr.append("test") # add test in the end
-# print(arr)
+# else:
+       # execute if no exception
 
-# arr.pop() # delete test
-# arr.pop(1) # delete index 1
-# print(arr)
+# finally:
+      # Some code .....(always executed)
 
-# arr.reverse() # reversing array
-# print(arr)
+dict = {'a': 1, 'c': 2}
+try:
+    key = input("key:")
+    value = dict[key]
+    print(value)
+except KeyError:
+    print("...")
 
-# arr3 = [5,1,3,4,5,6]
-# arr3.sort() # sorting 
-# print(arr3)
-# print(arr3.count(5)) # count numbers 5
-
-# arr4 = ["hello", "world", 5]
-# arr3.extend(arr4) # arr3 extends arr4
-# print(arr3)
-
-# arr4.insert(2, 5, ) # insert element 5 twice
-# print(arr4)
-
-# arr4.remove(5) # remove element 5
-# print(arr4) 
-
-# arr4.clear # clears all elements in arr4
-# print(arr4)
-
-# array = [1,2,4]
-# array2 = array
-# array2[1] = 9
-# print(array2)
-# print(array)
-
-# array3 = [2,5,2]
-# array4 = list(array3)
-# array4[1] = 9
-# print(array3)
-# print(array4)
-
-# zadataki
-
-# def z1():
-#     i = 0
-#     arr = [1,2,3,4,5,6,7,8,9,10]
-#     arr2 = []
-#     arr3 = []
-
-#     while i < len(arr):
-#         if arr[i] % 2 == 0:
-#             arr2.append(arr[i])
-#             arr.pop(i)
-#         else:
-#             arr3.append(arr[i])
-#             arr.pop(i)
-#     return arr, arr2, arr3
-
-# print(z1())
-
-# def z2():
-#     products = []
-
-#     while True:
-#         input_user = input()
-#         if input_user == "exit":
-#             break
-#         products.append(input_user)
+try:
+    num1 = int(input("num1: "))
+    num2 = int(input("num2: "))
+    result = num1 / num2
+except ValueError:
+    print("...")
+except ZeroDivisionError:
+    print("0...")
+else:
+    print(result)
+finally:
+    print()
+def palindrom(text):
+    rews = [text[-i] for i in range(1,len(text)+ 1)]
+    if text == ''.join(rews):
+        return True
+    else:
+        return False
     
-#     return products
+print(palindrom("anavolimilovana"))
 
-# print(z2())
+summa = lambda x, y: x + y
+print(summa(5, 6))
 
-# set
+take = lambda x, y: x - y
+print(take(5, 6))
 
-# obj = {
-#     "name": "Stefan",
-#     "surname": "Samokhval",
-#     "age": 18,
-#     "is_studying": True
-# }
+mix = lambda x, y, z: x + y - z
+print(mix(5, 6, 7))
 
-# print(obj)
+komb = lambda x, y, z: x * y + z
+print(komb(5, 6, 6))
 
-# name=obj["name"] # vityanut obj
+def stepen(n):
+    return lambda x: x**n
 
-# print(name)
+result = stepen(5)
+print(result(2))
 
-# obj["name"] = "Hello" # update obj
+# recursion
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(5))
 
-# print(obj)
+def kvadrat(x):
+    return lambda y: x**y
+result = kvadrat(2)
+print(result(5)) 
 
-# obj["is_work"] = True # add obj
 
-# print(obj)
+def limits(n, lim):
+    if n < lim:
+        return "ys"
+    else:
+        print(n)
+        return limits(n-1, lim)
+print(limits(3, 0))
 
-# def za1(name, surname):
-#     obj = {}
 
-#     obj["name"] = name
-#     obj["surname"] = surname
+import math
+def sherlockAndMinimax(arr, p, q):
+    arr1 = []
+    M = [i for i in range(p, (q+1))]
+    for j in range(0, len(arr)):
+        arr1.append([int(math.fabs(arr[j] - i)) for i in range(p, (q+1))])
+    m = []
+    for i in range(0, len(arr1[0])):
+        time = [arr1[j][i] for j in range(0, len(arr1))]
+        m.append(min(time))
+        print(time, m)
+    ind= m.index(max(m))
+    return M[ind]
+result = sherlockAndMinimax([3, 5, 7, 9], 6)
+print(result)
 
-#     return obj
+def suma(n):
+    if n > 0:
+         return 1 + suma(n-1)
+suma(10)
+import os
 
-# print(za1(input(), input()))
+files = open("efnef.txt")
+print(files.read())
+print(files.readlines())
+os.remove("efnef.txt")
 
-# def za2(objects, balls):
-#     obj = {}
-
-#     while True:
-#         if objects != "exit":
-#             obj[objects] = balls
-#         else:
-#             break
-
-#     return obj
-
-# print(za2(input(), input()))
+with open("zadatak1.txt") as fajl:
+    def printer(h):
+        res = fajl.readlines()
+        stanovi = [int(((res[i]).split(',')[2])[:-2]) for i in range(0, len(res))]
+        print(stanovi)
+        maxi = max(stanovi)
+        print(maxi)
+        for i in range(0, len(res)):
+            if (res[i]).split(',')[0] == h and int(((res[i]).split(',')[2])[:-2]) == maxi:
+                print ((res[i]).split(',')[1])
+                break
+    printer(input())
+list_of_tasks = []
+while True:
+    user_input = input("\n1: add task \n2: lookup tasks \n3: mark completed \n4: exit \n")
+    try:
+        if int(user_input) == 1:
+            list_of_tasks.append(input("\nenter task: "))
+        elif int(user_input) == 2:
+            print(list_of_tasks)
+        elif int(user_input) == 3:
+            try:
+                list_of_tasks.remove(input("\ntype task which is completed: "))
+            except:
+                print("\nnot in list")
+        elif int(user_input) == 4:
+            print('\ncao')
+            break
+    except:
+        print("incorrect!")
