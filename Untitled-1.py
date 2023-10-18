@@ -1,3 +1,6 @@
+from __future__ import print_function, unicode_literals
+from InquirerPy import prompt
+
 def task1(a,b):
     elements = [item for item in a if item in b]
     return elements
@@ -75,3 +78,115 @@ def task6():
     return max
 
 print(task6())
+
+def task7():
+    arr = []
+
+    with open("hex.txt", "r") as file:
+        lines = file.readlines()
+
+    for i in lines:
+        if i.startswith("0x"):
+            hex_number = int(i, 16)
+            if str(hex_number).endswith("3"):
+                arr.append(hex_number)
+        else:
+            continue
+
+    return sum(arr)
+
+print(task7())
+
+def task8():
+    event = []
+
+    while True:
+        user_input = input()
+
+        if user_input == "exit":
+            break
+
+        event.append(user_input)
+    
+    return event
+
+print(task8())
+
+def task9():
+    films = ["Trancedence", "Fast and Furious 8", "Need for Speed", "Anabel"]
+    favourite_films = []
+    watched_films = []
+
+    questions = [
+        {
+            'type': 'list',
+            'name': 'action',
+            'message': 'Menu',
+            'choices': ['All films', 'Add film', 'Add favourite film', 'Watched films', 'Exit']
+        }
+    ]
+
+    while True:
+        answers = prompt(questions)
+        action = answers['action']
+
+        if action == 'All films':
+            print("All films: ")
+
+            for film in films:
+                print(film)
+
+        elif action == 'Add film':
+            new_film = input("Input name of the film: ")
+
+            films.append(new_film)
+            
+            print(f"Movie '{new_film} was added'")
+
+        elif action == 'Add favourite film':
+            favorite_choices = [
+                {
+                    'type': 'list',
+                    'qmark': '❤',
+                    'message': 'Choise a favourite film: ',
+                    'name': 'favorite_films',
+                    'choices': films
+                }
+            ]
+
+            favorite_answers = prompt(favorite_choices)
+            selected_favorite_films = favorite_answers['favorite_films']
+            print(selected_favorite_films)
+
+            if selected_favorite_films:
+                print("Favourite film: ")
+                favourite_films.append(selected_favorite_films)
+                print(selected_favorite_films)
+            else:
+                print("You haven't chosen any movie")
+
+        elif action == 'Watched films':
+            watched_films = [
+                {
+                    'type': 'list',
+                    'qmark': '✔',
+                    'message': 'Select movies that have been watched: ',
+                    'name': 'watched_films',
+                    'choices': films
+                }
+            ]
+            watched_answers = prompt(watched_films)
+            selected_watched_films = watched_answers['watched_films']
+
+            if selected_watched_films:
+                watched_films.append(selected_watched_films)
+                films.remove(selected_watched_films)
+                    
+                print("Film has been added to last watched ")
+            else:
+                print("You haven't chosen any movie")
+
+        elif action == 'Exit':
+            break
+
+task9()
