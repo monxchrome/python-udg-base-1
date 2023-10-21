@@ -13,7 +13,10 @@ def task2(bcrypt):
     result = []
     for i in bcrypt:
         if i.isalpha():
-            result.append(i.lower())
+            if i.isupper():
+                result.append(i.lower())
+            elif i.islower() :
+                result.append(i.upper())
         if i.isdigit():
             result.append(i)
         else:
