@@ -1,0 +1,5 @@
+Poljska,Krakov,1725000 
+Njemacka,Berlin,3769000 
+Poljska,Varsava,1708000 
+Montenegro,Berane,60000 
+Montenegro,Plav,35000 

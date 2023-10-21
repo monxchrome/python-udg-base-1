@@ -1,57 +1,79 @@
-# class Student(object):
-#     name = "Stefan"
-#     age = 18
+def task1(num):
+    arr = []
+    for i in str(num):
+        arr.append(int(i))
+        if arr[0] * arr[-1] > sum(arr[1:-1]):
+            return arr[0] * arr[-1]
+        else:
+            return sum(arr[1:-1])
 
-# print(Student().name)
+print(task1(45356))
 
-class Student(object):
-    def __init__(self, name, age) -> None: 
+def task2(bcrypt):
+    result = []
+    for i in bcrypt:
+        if i.isalpha():
+            result.append(i.lower())
+        if i.isdigit():
+            result.append(i)
+        else:
+            continue
+    string = ''.join(result)
+
+    return string
+
+print(task2("hj87VHj9^26gbhnUJ72'"))
+
+def task3(arr):
+    counter = 0
+
+    for i in arr:
+        if i < 0:
+            counter += 1
+        else:
+            continue
+    return counter
+
+print(task3([1, 2, -1, 3, -3]))
+
+def task4():
+    file = open("task4.txt", "r")
+    lines = file.readlines()
+    for line in lines:
+        test = line.split(',')
+        for i in test:
+            
+
+task4()
+
+channel_arr = ['tetete']
+class Tv:
+    def __init__(self, num, name, channels, volume) -> None:
+        self.num = num
         self.name = name
-        self.age = age
-        print(self.name)
+        self.channels = channels
+        self.volume = volume
         pass
 
-    def print_info(self):
-        print(f"name - {self.name}")
-        print(f"age - {self.age}")
-
-student = Student("Stefan", 18)
-student.print_info()
-
-# class Math(object):
-#     def __init__(self, x) -> None:
-#         self.x = x
-#         pass
-
-#     def square(self):
-#         return self.x * self.x
-
-# math = Math(5)
-# print(math.square())
-
-# class Test:
-#     @staticmethod
-#     def print1():
-#         print(f"Hello world")
-
-# Test.print1()
-# obj = Test
-# obj.print1()
-
-# class ClassMethod:
-#     @classmethod
-
-#     def hello(cls):
-#         print("Hello this is a class {}".format(cls.__name__))
-
-# ClassMethod.hello()
-
-# class NewClass:
-#     def __new__(cls):
-#         print(super(NewClass))
-#         return super(NewClass, cls).__new__(cls)
+    def add_channel(self):
+        c_name = input()
+        channel_arr.append(c_name)
+        return f"channel {c_name} has been added"
     
-#     def __init__(self) -> None:
-#         print("init")
+    def boost_tone(self):
+        tone = self.volume
+        if self:
+            tone += 1
+        return f"your tone is {tone}"
+    
+    def channel_name(self):
+        for i in channel_arr:
+            if i == self.name:
+                return f"channel name is {self.name}"
+            else:
+                print("YOC: invalid index")
 
-# obj = NewClass()
+tv1 = Tv(1, 'tetete', 1, 10)
+print(tv1.add_channel())
+print(tv1.boost_tone())
+print(tv1.channel_name())
