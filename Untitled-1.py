@@ -37,11 +37,24 @@ def task3(arr):
 print(task3([1, 2, -1, 3, -3]))
 
 def task4():
-    file = open("task4.txt", "r")
-    lines = file.readlines()
-    for line in lines:
-        test = line.split(',')
-        for i in test:
+    i_country = input()
+    min_num = None
+    min_country = None
+
+    with open("task4.txt", "r") as file:
+        for line in file:
+            part = line.strip().split(',')
+        if len(part) == 3:
+            country, city, num_min = part
+
+            if country == i_country:
+                num_min == min_num
+                min_country = city
+    
+    if min_country is not None:
+        print(f"{i_country} - {min_country}")
+    else:
+        print(f"put file {i_country}")
             
 
 task4()
